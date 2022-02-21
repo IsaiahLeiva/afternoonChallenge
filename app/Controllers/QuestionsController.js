@@ -6,9 +6,10 @@ function _drawQuestion() {
     let questions = ProxyState.questions;
     let template = ''
     questions.forEach(q => questionsTemplate += q.template)
-    document.getElementById("").innerHTML
-
+    document.getElementById("").innerHTML = template
 }
+
+
 
 
 export class Question {
