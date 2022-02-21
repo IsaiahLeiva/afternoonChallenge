@@ -1,23 +1,17 @@
 import { ProxyState } from "../AppState"
 
-
-
-function _drawQuestion() {
-    let questions = ProxyState.questions;
+function _drawBooks() {
     let template = ''
-    questions.forEach(q => questionsTemplate += q.template)
-    document.getElementById("").innerHTML = template
+    ProxyState.books.forEach(b => template += `<li>${b.name}</li>`)
+    document.getElementById('books').innerHTML = template
 }
 
-
-
-
-export class Question {
-    constructor(difficulty, category, type) {
-        this.difficulty = difficulty
-        this.category = category
-        this.type = type
+export class TriviaAPIService {
+    constructor() {
+        console.log('trivia API controller loaded');
 
     }
-
 }
+
+
+
